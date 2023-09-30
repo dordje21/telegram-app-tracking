@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     outDir: './docs'
   },
-  base: '/'
+  base: '/my-react-telegram-web-app/'
 })
