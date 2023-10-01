@@ -3,14 +3,14 @@ import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-import { default as WebApp, default as WebAppInitData } from '@twa-dev/sdk'
+import { default as WebApp } from '@twa-dev/sdk'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [user, setUser] = useState()
+  const [user, setUser] = useState('')
 
   useEffect(() => {
-    setUser(WebAppInitData.user)
+    setUser(WebApp.initDataUnsafe.user.first_name)
   })
   
   return (
@@ -34,8 +34,7 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        {user.username}
-        {user.id}
+        {user}
       </div>
     </>
   )
