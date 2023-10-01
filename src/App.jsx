@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState('')
 
   useEffect(() => {
-    setUser(WebApp.initDataUnsafe.user.first_name)
+    setUser(WebApp.initDataUnsafe.user)
   })
   
   return (
@@ -34,7 +34,12 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        {user}
+      <p>{user.id}</p>
+      <p>{user.first_name}</p>
+      <p>{user.last_name}</p>
+      <p>{user.username}</p>
+      <p>{user.is_premium}</p>
+      <img src={user.photo_url} width={100} height={100}/>
       </div>
     </>
   )
