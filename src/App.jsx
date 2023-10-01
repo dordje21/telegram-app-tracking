@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,7 +7,12 @@ import { default as WebApp, default as WebAppInitData } from '@twa-dev/sdk'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [user, setUser] = useState()
 
+  useEffect(() => {
+    setUser(WebAppInitData.user)
+  })
+  
   return (
     <>
       <div>
@@ -29,7 +34,8 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        {WebAppInitData.user}
+        {user.username}
+        {user.id}
       </div>
     </>
   )
