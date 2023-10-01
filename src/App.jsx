@@ -29,7 +29,7 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        {WebAppInitData.user.first_name}
+        {WebAppInitData.user}
       </div>
     </>
   )
