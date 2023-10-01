@@ -29,6 +29,12 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
+        <button onClick={() => WebApp.colorScheme}>
+        colorScheme
+        </button>
+        <button onClick={() => WebApp.HapticFeedback}>
+        colorScheme
+        </button>
       </div>
     </>
   )
