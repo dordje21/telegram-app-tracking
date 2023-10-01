@@ -3,7 +3,7 @@ import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-import WebApp from '@twa-dev/sdk'
+import { default as WebApp, default as WebAppInitData } from '@twa-dev/sdk'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,12 +29,7 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        <button onClick={() => WebApp.colorScheme(light)}>
-        colorScheme
-        </button>
-        <button onClick={() => WebApp.HapticFeedback()}>
-        colorScheme
-        </button>
+        {WebAppInitData.user.first_name}
       </div>
     </>
   )
