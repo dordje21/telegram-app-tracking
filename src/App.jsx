@@ -29,10 +29,10 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
-        <button onClick={() => WebApp.colorScheme}>
+        <button onClick={() => WebApp.colorScheme(light)}>
         colorScheme
         </button>
-        <button onClick={() => WebApp.HapticFeedback}>
+        <button onClick={() => WebApp.HapticFeedback()}>
         colorScheme
         </button>
       </div>
